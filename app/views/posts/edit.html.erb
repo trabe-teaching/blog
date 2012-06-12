@@ -1,4 +1,4 @@
-<h2>New post</h2>
+<h2>Update post</h2>
 
 <%= form_for @post do |form| %>
 
@@ -6,7 +6,5 @@
 
   <%= render form %>
 
-  <%= form.submit %> or <%= link_to 'cancel', posts_path %>
-
+  <%= form.submit %> or <%= link_to 'cancel', post_path %>
 <% end %>
-
