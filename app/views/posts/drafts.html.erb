@@ -1,0 +1,9 @@
+<%= link_to 'All posts', posts_path %>
+
+<% if @posts.empty? %>
+  <p>
+  No drafts!
+  </p>
+<% else %>
+  <%= render @posts %>
+<% end %>

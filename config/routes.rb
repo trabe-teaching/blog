@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
   resources :posts do
     resources :comments, :only => [:new, :create]
+    get :drafts, :on => :collection
   end
 
   root :to => 'posts#index'
