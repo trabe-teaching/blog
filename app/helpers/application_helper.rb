@@ -8,4 +8,8 @@ module ApplicationHelper
       content_tag(:ul, model.errors.full_messages.map {|m| content_tag :li, m}.join.html_safe),
       :class => 'form_errors')
   end
+
+  def markdown(text)
+    Maruku.new(text).to_html.html_safe
+  end
 end

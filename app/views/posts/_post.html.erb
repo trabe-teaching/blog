@@ -4,6 +4,6 @@
     <%= t 'post.created_at' %> <%= l post.created_at, :format => :post %>
   </div>
   <div class="content">
-    <%= post.content %>
+    <%= markdown post.content %>
   </div>
 <% end %>
