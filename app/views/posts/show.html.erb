@@ -2,3 +2,15 @@
 <%= link_to 'Edit', edit_post_path %> |
 <%= link_to 'Destroy', post_path, :method => :delete, :confirm => 'are you sure?' %> |
 <%= link_to 'All posts', posts_path %>
+
+<h3>Comments</h3>
+<% if @post.comments.empty? %>
+  <p>No comments</p>
+<% else %>
+  <% for comment in @post.comments %>
+    <em><%= comment.author %> says</em>
+    <p>
+    <%= comment.content %>
+    </p>
+  <% end %>
+<% end %>
