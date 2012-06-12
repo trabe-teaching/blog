@@ -1,3 +1,4 @@
 <%= render @post %>
 <%= link_to 'Edit', edit_post_path %> |
+<%= link_to 'Destroy', post_path, :method => :delete, :confirm => 'are you sure?' %> |
 <%= link_to 'All posts', posts_path %>
