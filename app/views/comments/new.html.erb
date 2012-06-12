@@ -1,0 +1,18 @@
+<h2>Add comment to post <%= @post.title %></h2>
+
+<%= form_for [@post, @comment] do |form| %>
+
+  <%= errors_for @comment %>
+
+  <div>
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <%= form.submit 'Submit comment' %> or <%= link_to 'cancel', @post %>
+<% end %>
