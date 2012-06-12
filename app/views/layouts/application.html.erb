@@ -8,6 +8,11 @@
 </head>
 <body>
   <h1>My awesome blog</h1>
+  
+  <% if flash.notice %>
+    <div id="flash"><%= flash.notice %></div>
+  <% end %>
+
   <%= yield %>
 </body>
 </html>

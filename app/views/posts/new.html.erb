@@ -1,0 +1,18 @@
+<h2>New post</h2>
+
+<%= form_for @post do |form| %>
+
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <%= form.submit %> or <%= link_to 'cancel', posts_path %>
+
+<% end %>
+
