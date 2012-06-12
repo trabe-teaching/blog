@@ -198,3 +198,6 @@ es:
   activerecord:
     errors:
       <<: *errors
+  
+  post:
+    created_at: publicado el
