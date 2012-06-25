@@ -6,5 +6,7 @@
 
   <%= render form %>
 
+	<%= select_tag 'post[author_id]', options_from_collection_for_select(@authors, :id, :name, @post.author_id) %>
+
   <%= form.submit %> or <%= link_to 'cancel', post_path %>
 <% end %>
