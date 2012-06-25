@@ -14,6 +14,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @authors = Author.find(:all, :order => 'name')
     @post = Post.new
   end
 
@@ -27,6 +28,7 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @authors = Author.find(:all, :order => 'name')
     @post = Post.find(params[:id])
   end
 
