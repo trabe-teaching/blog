@@ -201,3 +201,5 @@ es:
   
   post:
     created_at: publicado el
+    authored_by: escrito por
+  

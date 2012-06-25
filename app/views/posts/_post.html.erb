@@ -1,5 +1,8 @@
 <%= div_for post do %>
   <h2><%= link_to post.title, post %></h2>
+  <div class="author">
+    <%= t 'post.authored_by' %> <%= post.author.name %>
+  </div>
   <div class="date">
     <%= t 'post.created_at' %> <%= l post.created_at, :format => :post %>
   </div>
