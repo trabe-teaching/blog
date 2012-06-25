@@ -6,5 +6,6 @@
     No posts!
   </p>
 <% else %>
+  <%= paginate @posts %>
   <%= render @posts %>
 <% end %>
