@@ -8,7 +8,10 @@
   <%= form.text_area :content %>
 </div>
 
+<%= select("post" , "author_id", Author.all.map {|u| [u.name , u.id]}) %>
+
 <div>
   <%= form.label :published %>
   <%= form.check_box :published %>
 </div>
+

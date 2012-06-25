@@ -1,7 +1,8 @@
 class Post < ActiveRecord::Base
   has_many :comments
+  belongs_to :author
 
-  attr_accessible :content, :title, :published
+  attr_accessible :content, :title, :published, :author_id
 
   validates :title, :content, :presence => true
 
