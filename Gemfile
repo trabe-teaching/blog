@@ -37,3 +37,6 @@ gem 'maruku'
 
 # To use debugger
 # gem 'debugger'
+
+# Use Kaminari gem for pagination
+gem 'kaminari'

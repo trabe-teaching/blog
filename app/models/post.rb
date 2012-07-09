@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  paginates_per 2
   has_many :comments
 
   attr_accessible :content, :title, :published
