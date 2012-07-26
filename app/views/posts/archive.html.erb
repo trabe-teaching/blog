@@ -1,0 +1,9 @@
+<h2>Archive</h2>
+
+<% if @posts.empty? %>
+  <p>
+    No posts!
+  </p>
+<% else %>
+  <%= render @posts %>
+<% end %>

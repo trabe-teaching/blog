@@ -4,6 +4,8 @@ Blog::Application.routes.draw do
     get :drafts, :on => :collection
   end
 
+  match 'archive(/:year(/:month(/:day)))' => 'posts#archive'
+
   root :to => 'posts#index'
 
   # The priority is based upon order of creation:

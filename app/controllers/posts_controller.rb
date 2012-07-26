@@ -9,6 +9,10 @@ class PostsController < ApplicationController
     @posts = Post.draft.order('created_at desc')
   end
 
+  def archive
+    @posts = Post.by_date(params[:year], params[:month], params[:day])
+  end
+
   def show
     @post = Post.find(params[:id])
   end
