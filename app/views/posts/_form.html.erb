@@ -12,3 +12,8 @@
   <%= form.label :published %>
   <%= form.check_box :published %>
 </div>
+
+<div>
+  <%= form.label :author_id %>
+  <%= form.collection_select :author_id, Author.all, :id, :name %>
+</div>
